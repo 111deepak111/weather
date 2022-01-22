@@ -160,17 +160,17 @@ header::before{
     /* color: var(--body-col); */
 }
 #delhi{
-    background: url('images/new-delhi-final.jpg') no-repeat center center/cover;
+    background: url('images/new-delhi-final.JPG') no-repeat center center/cover;
 
 }
 #bangalore{
-    background: url('images/bangalore-final.jpg')no-repeat center center/cover;
+    background: url('images/bangalore-final.JPG')no-repeat center center/cover;
 }
 #chennai{
-    background: url('images/chennai-final.jpg')no-repeat center center/cover;
+    background: url('images/chennai-final.JPG')no-repeat center center/cover;
 }
 #mumbai{
-    background: url('images/mumbai-final.jpg')no-repeat center center/cover;
+    background: url('images/mumbai-final.JPG')no-repeat center center/cover;
 }
 .list-info{
     list-style: none;
