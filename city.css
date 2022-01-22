@@ -1,0 +1,221 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:var(--body-col);
+    color: black;
+    font-family: var(--tert-font);
+    z-index: -10;
+}
+
+:root{
+    --prim-font:'PT Serif', serif;
+    --sec-font:'Quicksand', sans-serif;
+    --tert-font:'Roboto Slab', serif;
+    --prim-col:rgb(75, 158, 212);
+    --sec-col:#fa9f83;
+    --body-col:rgb(238, 238, 238);
+}
+/* CSS FOR HEADER-----------------------------------------------------------------------------------*/
+h1{
+    color: black;
+    font-family: var(--prim-font);
+    text-align: center;
+    font-size: 60px;
+}   
+
+header{
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 175px;
+    margin-bottom: 100px;
+    border-bottom: 25px solid var(--prim-col);
+}
+header::before{
+    content: "";
+    background: url('https://source.unsplash.com/random/1000x175/?sky,morning,clouds') no-repeat center center/cover;
+    height:175px;
+    width: 100%;
+    margin: auto;
+    opacity: 0.65;
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+}
+
+/* CSS FOR WEATHER TRACKER -------------------------------------------------------------------------------------*/
+#weather-tracker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--prim-col);
+    margin: 50px 0px;
+    flex-wrap: wrap;
+    padding: 25px 30px;
+    border-radius: 20px;
+    z-index: -10;
+    flex-direction: column;
+}
+#icon-holder{
+    display: none;
+    width: 100vw;
+}
+#icon{
+    display: none;
+}
+#card-holder{
+    width: 100%;
+    padding: 15px 15px;
+    margin: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    display: none;
+}
+#city-name{
+    display: none;
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    font-family: var(--sec-font);
+    color: var(--body-col);
+    text-align: center;
+}
+#city-name::first-letter{
+    text-transform: uppercase;
+}
+#city{
+    width: 300px;
+    height: 28px;
+    margin-right: 25px;
+    padding: 5px 2px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+#btn{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size:20px;
+}
+
+#btn:hover{
+    transform: skew('360deg');
+    background-color: white;
+    color: black;
+}
+.citycards{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    width: 300px;
+    height: 125px;
+    padding: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    color: white;
+    background-color: var(--sec-col);
+    border-radius:15px;
+}
+.city-weather-list{
+    list-style: none;
+    color: white;
+}
+/* CSS FOR NEWS SECTION---------------------------------------------------------------------------*/
+#news{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+    border-radius: 25%;
+    border: 2px solid black;
+    color: var(--body-col)
+}
+.cards h3{
+    font-family: var(--sec-font);
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* color: var(--body-col); */
+}
+#delhi{
+    background: url('Images/new-delhi-final.jpg') no-repeat center center/cover;
+
+}
+#bangalore{
+    background: url('Images/bangalore-final.jpg')no-repeat center center/cover;
+}
+#chennai{
+    background: url('Images/chennai-final.jpg')no-repeat center center/cover;
+}
+#mumbai{
+    background: url('Images/mumbai-final.jpg')no-repeat center center/cover;
+}
+.list-info{
+    list-style: none;
+}
+.info-item{
+    font-size: 16px;
+    font-family: var(--tert-font);
+    font-weight: 900;
+}
+#delhi-info{
+    display: none;
+}
+#bangalore-info{
+    display: none;
+}
+#mumbai-info{
+    display: none;
+}
+#chennai-info{
+    display: none;
+}
+
+/* CSS FOR FOOTER ---------------------------------------------------------------------------- */
+footer{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--prim-col);
+    margin-top: 125px;
+    /* position: absolute;
+    bottom: 0px;
+    right: 0px; */
+    width: 100%;
+}
+footer ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+footer li{
+    margin: 3px;
+    color: black;
+    font-weight: 700;
+}

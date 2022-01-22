@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Weather Tracker</title>
+    <link rel="stylesheet" href="city.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Quicksand&family=Roboto+Slab:wght@100&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>City Weather Tracker</h1>
+    </header>
+    <section id="weather-tracker">
+        <h2 id="city-name"></h2>
+        <div>
+            <input type="text" id="city" placeholder="Enter City Name">
+            <button id="btn" onclick="cityfunc()">Weather Check Madi!!!</button>
+        </div>
+        <div id="iconholder">
+            <img src="" alt="Weather Icon" id="icon">
+        </div>
+        <div id="card-holder">
+            <div class="citycards" id="weather-card">
+                <h2 class="city-weather-heading">WEATHER</h2>
+                <ul class="city-weather-list">
+                    <li class="city-weather-item" id="main"></li>
+                    <li class="city-weather-item" id="description"></li>
+                </ul>
+            </div>
+            <div class="citycards" id="temp-card">
+                <h2 class="city-weather-heading">TEMPRATURE</h2>
+                <ul class="city-weather-list">
+                    <li class="city-weather-item" id="temprature"></li>
+                    <li class="city-weather-item" id="temp-max"></li>
+                    <li class="city-weather-item" id="temp-min"></li>
+                </ul>
+            </div>
+            <div class="citycards" id="wind-card">
+                <h2 class="city-weather-heading">WIND</h2>
+                <ul class="city-weather-list">
+                    <li class="city-weather-item" id="wind-speed"></li>
+                    <li class="city-weather-item" id="wind-deg"></li>
+                    <li class="city-weather-item" id="wind-gust"></li>
+                </ul>
+            </div>
+            <div class="citycards" id="misc-card">
+                <h2 class="city-weather-heading">MISC</h2>
+                <ul class="city-weather-list">
+                    <li class="city-weather-item" id="visibility"></li>
+                    <li class="city-weather-item" id="pressure"></li>
+                    <li class="city-weather-item" id="humidity"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="news">
+        <div class="cards" id="delhi" onmouseover="unhide('delhi')" onmouseout="hide('delhi')">
+            <h3 id="delhi-head">Delhi</h3>
+            <div class="info" id="delhi-info">
+                <ul class="list-info">
+                    <li class="info-item" id="delhi-temp"></li>
+                    <li class="info-item" id="delhi-main"></li>
+                    <li class="info-item" id="delhi-pressure"></li>
+                    <li class="info-item" id="delhi-speed"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cards" id="bangalore" onmouseover="unhide('bangalore')" onmouseout="hide('bangalore')">
+            <h3 id="bangalore-head">Bangalore</h3>
+            <div class="info" id='bangalore-info'>
+                <ul class="list-info">
+                    <li class="info-item" id="bangalore-temp"></li>
+                    <li class="info-item" id="bangalore-main"></li>
+                    <li class="info-item" id="bangalore-pressure"></li>
+                    <li class="info-item" id="bangalore-speed"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cards" id="chennai" onmouseover="unhide('chennai')" onmouseout="hide('chennai')">
+            <h3 id="chennai-head">Chennai</h3>
+            <div class="info" id="chennai-info">
+                <ul class="list-info">
+                    <li class="info-item" id="chennai-temp"></li>
+                    <li class="info-item" id="chennai-main"></li>
+                    <li class="info-item" id="chennai-pressure"></li>
+                    <li class="info-item" id="chennai-speed"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cards" id="mumbai" onmouseover="unhide('mumbai')" onmouseout="hide('mumbai')">
+            <h3 id="mumbai-head">Mumbai</h3>
+            <div class="info" id="mumbai-info">
+                <ul class="list-info">
+                    <li class="info-item" id="mumbai-temp"></li>
+                    <li class="info-item" id="mumbai-main"></li>
+                    <li class="info-item" id="mumbai-pressure"></li>
+                    <li class="info-item" id="mumbai-speed"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer id="foot">
+        <ul>
+            <li>Copyright reserved to Deepak |</li>
+            <li>Made by Deepak |</li>
+            <li>deepak.harshitpanwar.com/city.html</li>
+        </ul>
+    </footer>
+</body>
+<script src="city.js"></script>
+
+</html>
