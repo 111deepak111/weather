@@ -9,6 +9,7 @@ function cityfunc() {
         document.querySelector(":root").style.setProperty("--top-val", `875px`);
         document.querySelector(":root").style.setProperty("--top-val-mobile", `875px`);
         document.querySelector(":root").style.setProperty("--top-val-mobile", `775px`);
+        document.getElementById("city").value = "";
         // document.querySelector(":root").style.setProperty("--pseudo-bg", `none`);
         // document.querySelector(":root").style.setProperty("--pseudo-bg-mobile", `none`);
         // document.getElementById("city-weather-info").style.display = "none";
@@ -37,6 +38,7 @@ function cityfunc() {
                     document.getElementById("date").innerHTML = "does not";
                     document.getElementById("time").innerHTML = "EXISTS";
                     window.scrollTo(0, 550);
+                    document.getElementById("city").value = "";
                 }
                 else {
                     document.getElementById("weather-result").style.display = "flex";
@@ -55,8 +57,10 @@ function cityfunc() {
                     document.getElementById("info-4").innerHTML = `${data.wind.speed} m/s`;
                     document.getElementById("info-5").innerHTML = `${data.visibility} m`;
                     document.getElementById("info-6").innerHTML = `${data.main.humidity} %`;
-                    window.scrollTo(0, 550);
                     document.getElementById("weather-desc-icon").src = `images/${data.weather[0].icon}.svg`
+                    window.scrollTo(0, 550);
+                    document.getElementById("city").value = "";
+                    
                 }
             })
     }
